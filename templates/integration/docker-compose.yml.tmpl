@@ -1,0 +1,16 @@
+# 공유 외부 네트워크 뒤에 붙는 단일 서비스 배선 (범용 템플릿)
+# placeholder(${...})는 오버레이 values.env 값으로 렌더된다.
+# 대상 파일 자체의 ${DB_PASSWORD:?} 등은 화이트리스트 envsubst로 보존된다(런타임 참조).
+services:
+  ${PROJ}:
+    build: .
+    container_name: ${PROJ}
+    environment:
+      - DB_HOST=${DB_ALIAS}          # 공유 DB 별칭 (이름 충돌 회피)
+      - DB_NAME=${PROJ}              # 공유 Postgres 안 전용 database
+      - DB_PASSWORD=${DB_PASSWORD:?}  # 런타임 .env 참조 (렌더 시 보존)
+    networks: [${NETWORK}]
+    restart: unless-stopped
+networks:
+  ${NETWORK}:
+    external: true
