@@ -28,7 +28,7 @@ description: >-
 
 ## 클론 대상 — Doness
 
-`github.com/D0iloppa/Doness` (자체 git repo인 보일러플레이트). 미리 담고 있는 것 = **init 대상**:
+[`github.com/D0iloppa/Doness`](https://github.com/D0iloppa/Doness) (자체 git repo인 보일러플레이트). 미리 담고 있는 것 = **init 대상**:
 
 - **카파시 4원칙** — `CLAUDE.md`. 프로젝트의 모든 규칙에 우선.
 - **문서관리 골격** — `ai-docs/`(INDEX.md · agent-guidelines.md · context/current.md · spec/task/
