@@ -8,7 +8,8 @@
 | placeholder | 의미 | 예(오버레이에서 채움) |
 |-------------|------|----------------------|
 | `${PROJ}` | 프로젝트 슬러그 | `myapp` |
-| `${NETWORK}` | 공유 외부 도커 네트워크 | `dev-net` |
+| `${NETWORK}` | 게이트웨이 ingress용 공유 외부 도커 네트워크 | `edge` |
+| `${DB_NETWORK}` | 공유 DB 전용 외부 도커 네트워크 | `devdb` |
 | `${DB_ALIAS}` | 공유 DB 네트워크 별칭 | `devdb` |
 | `${DOMAIN_SUFFIX}` | 서브도메인 접미 | `example.com` |
 | `${CERT_PATH}` | 와일드카드 인증서 디렉토리 | `/etc/ssl/live/example.com` |

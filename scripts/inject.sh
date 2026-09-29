@@ -43,7 +43,7 @@ PROJ="$PROJ"
 set +a
 
 # 4) 화이트리스트 envsubst — 명시한 placeholder만 치환, 대상 파일의 ${VAR}는 보존
-VARS='${PROJ} ${NETWORK} ${DB_ALIAS} ${DOMAIN_SUFFIX} ${CERT_PATH} ${DNS_RESOLVER} ${PORT}'
+VARS='${PROJ} ${NETWORK} ${DB_NETWORK} ${DB_ALIAS} ${DOMAIN_SUFFIX} ${CERT_PATH} ${DNS_RESOLVER} ${PORT}'
 render() { envsubst "$VARS" < "$1"; }
 
 # compose → <proj>/docker-compose.yml
